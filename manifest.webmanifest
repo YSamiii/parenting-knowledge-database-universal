@@ -1,0 +1,27 @@
+{
+  "name": "宝宝宝宝育儿知识库",
+  "short_name": "宝宝知识库",
+  "description": "适用于所有家庭、可搜索并持续更新的通用宝宝育儿知识库",
+  "id": "parenting-knowledge-general-v1",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#f7f4ed",
+  "theme_color": "#f7f4ed",
+  "lang": "zh-CN",
+  "icons": [
+    {
+      "src": "assets/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
