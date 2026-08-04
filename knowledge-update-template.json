@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "knowledgeVersion": "1.0.1",
+  "generatedAt": "2026-08-02T12:00:00-04:00",
+  "entries": [
+    {
+      "id": "unique-topic-id",
+      "updatedAt": "2026-08-02",
+      "title": "新的知识主题",
+      "category": "emotion",
+      "ageRange": "1–3岁",
+      "tags": ["关键词1", "关键词2"],
+      "summary": "一段准确、简洁的核心总结。",
+      "principles": ["核心原则一", "核心原则二"],
+      "ageTips": [
+        {"label": "1–2岁", "items": ["适龄方法一", "适龄方法二"]}
+      ],
+      "practices": ["可执行做法一", "可执行做法二"],
+      "cautions": ["需要避免的绝对化说法或安全注意事项"],
+      "scenarioTips": ["不同年龄、气质或能力情况下的适用建议"]
+    }
+  ]
+}
