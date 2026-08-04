@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f7f4ed" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="育儿知识" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="description" content="适用于所有家庭、可搜索并持续更新的通用育儿知识库" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="assets/icon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/icon-192.png" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>宝宝育儿知识库 · 通用版</title>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="主导航">
+      <div class="brand">
+        <img src="assets/icon.svg" alt="" class="brand-icon" />
+        <div>
+          <div class="brand-title">宝宝育儿知识库</div>
+          <div class="brand-subtitle">持续整理 · 随问随用</div>
+        </div>
+      </div>
+
+      <nav class="nav-list">
+        <button class="nav-item active" data-view="home"><span>⌂</span>首页</button>
+        <button class="nav-item" data-view="library"><span>▦</span>知识库</button>
+        <button class="nav-item" data-view="checklists"><span>✓</span>发育清单</button>
+        <button class="nav-item" data-view="search"><span>⌕</span>搜索</button>
+        <button class="nav-item" data-view="ask"><span>?</span>问知识库</button>
+        <button class="nav-item" data-view="updates"><span>↻</span>更新与备份</button>
+        <button class="nav-item" data-view="settings"><span>⚙</span>设置</button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="version-badge" id="versionBadge">知识库 v1.0.0</div>
+        <div class="muted small">本地优先，可离线使用</div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <div>
+          <h1 id="pageTitle">首页</h1>
+          <p id="pageSubtitle">查看已整理的育儿知识与近期重点</p>
+        </div>
+        <button class="icon-button mobile-menu-button" id="mobileMenuButton" aria-label="打开导航">☰</button>
+      </header>
+
+      <section id="view-home" class="view active"></section>
+      <section id="view-library" class="view"></section>
+      <section id="view-checklists" class="view"></section>
+      <section id="view-search" class="view"></section>
+      <section id="view-ask" class="view"></section>
+      <section id="view-updates" class="view"></section>
+      <section id="view-settings" class="view"></section>
+    </main>
+  </div>
+
+  <div class="mobile-nav" aria-label="移动端导航">
+    <button class="mobile-nav-item active" data-view="home"><span>⌂</span><small>首页</small></button>
+    <button class="mobile-nav-item" data-view="library"><span>▦</span><small>知识</small></button>
+    <button class="mobile-nav-item" data-view="checklists"><span>✓</span><small>清单</small></button>
+    <button class="mobile-nav-item" data-view="search"><span>⌕</span><small>搜索</small></button>
+    <button class="mobile-nav-item" data-view="ask"><span>?</span><small>提问</small></button>
+    <button class="mobile-nav-item" data-view="updates"><span>↻</span><small>更新</small></button>
+  </div>
+
+  <div class="drawer-backdrop" id="drawerBackdrop"></div>
+
+  <dialog id="articleDialog" class="article-dialog">
+    <button class="dialog-close" id="dialogClose" aria-label="关闭">×</button>
+    <div id="articleDialogContent"></div>
+  </dialog>
+
+  <dialog id="toastDialog" class="toast-dialog">
+    <div id="toastText"></div>
+  </dialog>
+
+  <input type="file" id="importFileInput" accept="application/json,.json" hidden />
+
+  <script src="knowledge-base.js"></script>
+  <script src="checklists.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
